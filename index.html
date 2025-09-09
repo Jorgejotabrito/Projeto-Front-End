@@ -8,105 +8,207 @@
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
+      background: #f0f2f5;
+    }
+
+    h1 {
+      text-align: center;
     }
 
     .container {
-      display: flex;         
-      gap: 20px;             
-      flex-wrap: wrap;       /* Permite quebrar linha em telas pequenas */
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .coluna {
-      flex: 1 1 300px;       /* Ocupa espaço igual, mínimo de 300px */
-      text-align: justify;
-      background: #f4f4f4;
+      flex: 1 1 300px;
+      text-align: center;
+      background: #fff;
       padding: 15px;
       border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
 
-    @media (max-width: 700px) {
-      .container {
-        flex-direction: column; /* Coloca uma embaixo da outra */
-      }
+    .btn {
+      display: block;
+      margin: 8px 0;
+      padding: 12px;
+      background: #007bff; /* azul */
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .btn.concluido {
+      background: #28a745 !important; /* verde */
+    }
+
+    .progress-container {
+      width: 100%;
+      background: #ddd;
+      border-radius: 20px;
+      margin: 20px 0;
+      height: 25px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: #28a745;
+      text-align: center;
+      color: white;
+      line-height: 25px;
+      font-size: 14px;
+      transition: width 0.4s;
+    }
+
+    .reset-btn {
+      display: block;
+      margin: 15px auto;
+      padding: 10px 20px;
+      background: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .reset-btn:hover {
+      background: #a71d2a;
     }
   </style>
 </head>
 <body>
-  <h1>Projeto de exercícios</h1>
+  <h1>Projeto de Exercícios</h1>
+
+  <!-- Barra de progresso -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar">0%</div>
+  </div>
 
   <div class="container">
     <div class="coluna">
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe001/index.html">Executar o exercicio 001<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe002/index.html">Executar o exercicio 002<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex003/index.html">Executar o exercicio 003<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex004/index.html">Executar o exercicio 004<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex006/index.html">Executar o exercicio 006<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex007/index.html">Executar o exercicio 007<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex008/index.html">Executar o exercicio 008<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex008B/index.html">Executar o exercicio 008B<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex009/index.html">Executar o exercicio 009<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex010/index.html">Executar o exercicio 010<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex011/index.html">Executar o exercicio 011<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe012/index.html">Executar o exercicio 012<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe013/index.html">Executar o exercicio 013<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe014/index.html">Executar o exercicio 014<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe015/index.html">Executar o exercicio 015<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe016/index.html">Executar o exercicio 016<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe016b/index.html">Executar o exercicio 016b<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe016c/index.html">Executar o exercicio 016c<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe017/index.html">Executar o exercicio 017<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe017b/index.html">Executar o exercicio 017b<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe018/index.html">Executar o exercicio 018<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe018b/index.html">Executar o exercicio 018b<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe019/index.html">Executar o exercicio 019<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe020/index.html">Executar o exercicio 020<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe020b/index.html">Executar o exercicio 020b<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe020c/index.html">Executar o exercicio 020c<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe021/index.html">Executar o exercicio 021<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe021b/index.html">Executar o exercicio 021b<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe021c/index.html">Executar o exercicio 021c<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022/index.html">Executar o exercicio 022<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022b/index.html">Executar o exercicio 022b<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022c/index.html">Executar o exercicio 022c<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022d/index.html">Executar o exercicio 022d<p>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe001/index.html" class="btn">Exercício 001</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe002/index.html" class="btn">Exercício 002</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex003/index.html" class="btn">Exercício 003</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex004/index.html" class="btn">Exercício 004</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex006/index.html" class="btn">Exercício 006</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex007/index.html" class="btn">Exercício 007</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex008/index.html" class="btn">Exercício 008</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex008B/index.html" class="btn">Exercício 008B</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex009/index.html" class="btn">Exercício 009</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex010/index.html" class="btn">Exercício 010</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex011/index.html" class="btn">Exercício 011</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe012/index.html" class="btn">Exercício 012</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe013/index.html" class="btn">Exercício 013</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe014/index.html" class="btn">Exercício 014</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe015/index.html" class="btn">Exercício 015</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe016/index.html" class="btn">Exercício 016</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe016b/index.html" class="btn">Exercício 016b</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe016c/index.html" class="btn">Exercício 016c</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe017/index.html" class="btn">Exercício 017</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe017b/index.html" class="btn">Exercício 017b</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe018/index.html" class="btn">Exercício 018</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe018b/index.html" class="btn">Exercício 018b</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe019/index.html" class="btn">Exercício 019</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe020/index.html" class="btn">Exercício 020</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe020b/index.html" class="btn">Exercício 020b</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe020c/index.html" class="btn">Exercício 020c</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe021/index.html" class="btn">Exercício 021</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe021b/index.html" class="btn">Exercício 021b</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe021c/index.html" class="btn">Exercício 021c</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022/index.html" class="btn">Exercício 022</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022b/index.html" class="btn">Exercício 022b</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022c/index.html" class="btn">Exercício 022c</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022d/index.html" class="btn">Exercício 022d</a>
     </div>
 
     <div class="coluna">
-      <p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022e/index.html">Executar o exercicio 022e<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022f/index.html">Executar o exercicio 022f<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022g/index.html">Executar o exercicio 022g<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe023/index.html">Executar o exercicio 023<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe023b/index.html">Executar o exercicio 023b<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe023c/index.html">Executar o exercicio 023c<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe023d/index.html">Executar o exercicio 023d<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe023e/index.html">Executar o exercicio 023e<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe023f/index.html">Executar o exercicio 023f<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex024/index.html">Executar o exercicio 024<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex024b/index.html">Executar o exercicio 024b<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex024c/index.html">Executar o exercicio 024c<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex024d/index.html">Executar o exercicio 024d<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex024e/index.html">Executar o exercicio 024e<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex024f/index.html">Executar o exercicio 024f<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025/index.html">Executar o exercicio 025<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025b/index.html">Executar o exercicio 025b<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025c/index.html">Executar o exercicio 025c<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025d/index.html">Executar o exercicio 025d<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025e/index.html">Executar o exercicio 025e<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025f/index.html">Executar o exercicio 025f<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025g/index.html">Executar o exercicio 025g<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025h/index.html">Executar o exercicio 025h<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025i/index.html">Executar o exercicio 025i<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025j/index.html">Executar o exercicio 025j<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025l/index.html">Executar o exercicio 025l<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe026\mq001/index.html">Executar o exercicio 0026<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/exe026\mq002/index.html">Executar o exercicio 0026b<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/páginas extras/index.html">Executar o exercicio páginas extras<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/páginas extrasb/index.html">Executar o exercicio páginas extrasb<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/páginas extrasc/index.html">Executar o exercicio páginas extrasc<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/páginas extrasd/index.html">Executar o exercicio páginas extrasd<p>
-<p><a href="https://jorgejotabrito.github.io/html-css/exercicios/páginas extrase/index.html">Executar o exercicio páginas extrase<p>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022e/index.html" class="btn">Exercício 022e</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022f/index.html" class="btn">Exercício 022f</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe022g/index.html" class="btn">Exercício 022g</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe023/index.html" class="btn">Exercício 023</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe023b/index.html" class="btn">Exercício 023b</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe023c/index.html" class="btn">Exercício 023c</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe023d/index.html" class="btn">Exercício 023d</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe023e/index.html" class="btn">Exercício 023e</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe023f/index.html" class="btn">Exercício 023f</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex024/index.html" class="btn">Exercício 024</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex024b/index.html" class="btn">Exercício 024b</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex024c/index.html" class="btn">Exercício 024c</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex024d/index.html" class="btn">Exercício 024d</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex024e/index.html" class="btn">Exercício 024e</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex024f/index.html" class="btn">Exercício 024f</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025/index.html" class="btn">Exercício 025</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025b/index.html" class="btn">Exercício 025b</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025c/index.html" class="btn">Exercício 025c</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025d/index.html" class="btn">Exercício 025d</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025e/index.html" class="btn">Exercício 025e</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025f/index.html" class="btn">Exercício 025f</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025g/index.html" class="btn">Exercício 025g</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025h/index.html" class="btn">Exercício 025h</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025i/index.html" class="btn">Exercício 025i</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025j/index.html" class="btn">Exercício 025j</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/ex0025l/index.html" class="btn">Exercício 025l</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe026/mq001/index.html" class="btn">Exercício 026</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/exe026/mq002/index.html" class="btn">Exercício 026b</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/páginas extras/index.html" class="btn">Exercício Páginas Extras</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/páginas extrasb/index.html" class="btn">Exercício Páginas Extrasb</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/páginas extrasc/index.html" class="btn">Exercício Páginas Extrasc</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/páginas extrasd/index.html" class="btn">Exercício Páginas Extrasd</a>
+      <a href="https://jorgejotabrito.github.io/html-css/exercicios/páginas extrase/index.html" class="btn">Exercício Páginas Extrase</a>
     </div>
   </div>
 
+  <!-- Botão de reset -->
+  <button class="reset-btn" onclick="resetProgress()">Resetar Progresso</button>
+
+  <script>
+    const botoes = document.querySelectorAll(".btn");
+    const progressBar = document.getElementById("progress-bar");
+
+    // Carregar progresso do localStorage
+    let concluidos = JSON.parse(localStorage.getItem("exerciciosConcluidos")) || [];
+
+    function atualizarBarra() {
+      let percent = (concluidos.length / botoes.length) * 100;
+      progressBar.style.width = percent + "%";
+      progressBar.textContent = Math.round(percent) + "%";
+    }
+
+    // Marcar os já concluídos
+    botoes.forEach(btn => {
+      if (concluidos.includes(btn.textContent)) {
+        btn.classList.add("concluido");
+      }
+
+      btn.addEventListener("click", () => {
+        if (!concluidos.includes(btn.textContent)) {
+          concluidos.push(btn.textContent);
+          localStorage.setItem("exerciciosConcluidos", JSON.stringify(concluidos));
+          btn.classList.add("concluido");
+          atualizarBarra();
+        }
+      });
+    });
+
+    function resetProgress() {
+      concluidos = [];
+      localStorage.removeItem("exerciciosConcluidos");
+      botoes.forEach(btn => btn.classList.remove("concluido"));
+      atualizarBarra();
+    }
+
+    atualizarBarra();
+  </script>
 </body>
 </html>
